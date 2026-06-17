@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("tech-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Dark layer so text is easier to read */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 10, 25, 0.75);
+  z-index: -1;
+}
+
+/* Main center content */
+.portfolio {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.portfolio h1 {
+  font-size: 4rem;
+  color: #00eaff;
+  text-shadow: 0 0 20px #00eaff;
+  margin-bottom: 10px;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.portfolio p {
+  max-width: 500px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #00eaff, #6a00ff);
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.buttons a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #00eaff;
+}
+
+/* Character images */
+.character {
+  position: fixed;
+  bottom: 0;
+  max-height: 80vh;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.luffy {
+  left: 20px;
+}
+
+.vegapunk {
+  right: 20px;
+}
+
+/* Sections */
+.section {
+  min-height: 60vh;
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  color: #00eaff;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.2rem;
+}
+
+/* Makes it work better on phones */
+@media (max-width: 900px) {
+  .portfolio h1 {
+    font-size: 3rem;
+  }
+
+  .portfolio h2 {
+    font-size: 1.5rem;
+  }
+
+  .character {
+    max-height: 45vh;
+    opacity: 0.6;
+  }
+
+  .luffy {
+    left: -40px;
+  }
+
+  .vegapunk {
+    right: -40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  .character {
+    max-height: 35vh;
+    opacity: 0.4;
+  }
+
+  .portfolio h1 {
+    font-size: 2.5rem;
+  }
+}
